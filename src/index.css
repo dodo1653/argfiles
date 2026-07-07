@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0a;
+  --color-surface: #141414;
+  --color-surface-elevated: #1c1c1c;
+  --color-border: #2a2a2a;
+  --color-gold: #d4a853;
+  --color-gold-dim: #a8883a;
+  --color-red: #cc3333;
+  --color-red-bright: #e04444;
+  --color-text: #e8e6e3;
+  --color-text-muted: #888888;
+  --color-solana-purple: #9945ff;
+  --color-solana-green: #14f195;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2a #0a0a0a;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+.scanline {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+.stamp {
+  display: inline-block;
+  padding: 0.15em 0.4em;
+  border: 2px solid;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.stamp-classified {
+  border-color: var(--color-red);
+  color: var(--color-red);
+}
+
+.stamp-top-secret {
+  border-color: var(--color-red-bright);
+  color: var(--color-red-bright);
+}
+
+.stamp-confidential {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(212, 168, 83, 0.1); }
+  50% { box-shadow: 0 0 30px rgba(212, 168, 83, 0.2); }
+}
+
+.glow-card {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.text-glow {
+  text-shadow: 0 0 40px rgba(212, 168, 83, 0.15);
+}
