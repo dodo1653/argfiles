@@ -24,7 +24,7 @@ const previewCards = [
   },
   {
     icon: Database,
-    title: '$FIFA Token',
+    title: '$FIFAFILES Token',
     desc: 'A tokenised movement on Solana. The conspiracy is now a currency. Join the dossier.',
     link: '/token',
     color: 'text-solana-green',
@@ -161,11 +161,11 @@ export default function HomePage() {
           <div className="mt-20 text-center p-8 rounded-lg border border-border bg-surface">
             <img
               src="/ticker.png"
-              alt="$FIFA Token"
+              alt="$FIFAFILES Token"
               className="w-16 h-16 rounded-full border-2 border-gold/20 mx-auto mb-3 object-cover"
             />
             <TokenBadge className="mb-3" />
-            <p className="font-mono text-lg font-bold text-text">$FIFA</p>
+            <p className="font-mono text-lg font-bold text-text">$FIFAFILES</p>
             <p className="text-sm text-text-muted mt-2 mb-4 max-w-md mx-auto">
               The movement is tokenised. The evidence is permanent. The narrative is unstoppable.
             </p>

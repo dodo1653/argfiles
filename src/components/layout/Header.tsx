@@ -21,7 +21,7 @@ export default function Header() {
           <Link to="/" className="flex items-center gap-2.5 group">
             <img
               src="/ticker.png"
-              alt="$FIFA"
+              alt="$FIFAFILES"
               className="w-5 h-5 rounded-full border border-gold/30 object-cover"
             />
             <span className="font-mono text-sm font-semibold text-text tracking-tight">

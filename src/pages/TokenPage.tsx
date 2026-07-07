@@ -20,13 +20,13 @@ const steps = [
   },
   {
     icon: Shield,
-    title: 'Swap for $FIFA',
-    desc: 'Search for the contract address below and swap your SOL for $FIFA tokens.',
+    title: 'Swap for $FIFAFILES',
+    desc: 'Search for the contract address below and swap your SOL for $FIFAFILES tokens.',
   },
 ]
 
 export default function TokenPage() {
-  usePageTitle('$FIFA Token')
+  usePageTitle('$FIFAFILES Token')
   const [copied, setCopied] = useState(false)
 
   const copyAddress = () => {
@@ -48,16 +48,16 @@ export default function TokenPage() {
           <div className="flex flex-col items-center gap-6 mb-8">
             <img
               src="/ticker.png"
-              alt="$FIFA Token"
+              alt="$FIFAFILES Token"
               className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-gold/30 shadow-lg shadow-gold/10 object-cover"
             />
             <h1 className="font-mono text-3xl sm:text-4xl font-bold text-text">
-              $FIFA
+              $FIFAFILES
             </h1>
           </div>
 
           <p className="text-sm text-text-muted max-w-xl leading-relaxed mb-6 mx-auto">
-            The conspiracy is tokenised. $FIFA is a community-driven token on the Solana
+            The conspiracy is tokenised. $FIFAFILES is a community-driven token on the Solana
             blockchain, launched on pump.fun. Holders are part of the dossier — the evidence
             lives on-chain, and the narrative can never be deleted.
           </p>
@@ -79,7 +79,7 @@ export default function TokenPage() {
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border">
                   <span className="text-xs text-text-muted font-mono">Ticker</span>
-                  <span className="text-xs text-solana-green font-mono font-bold">$FIFA</span>
+                  <span className="text-xs text-solana-green font-mono font-bold">$FIFAFILES</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border">
                   <span className="text-xs text-text-muted font-mono">Network</span>

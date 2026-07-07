@@ -15,7 +15,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-xs text-text-muted hover:text-solana-green transition-colors"
             >
-              $FIFA <ExternalLink className="w-3 h-3" />
+              $FIFAFILES <ExternalLink className="w-3 h-3" />
             </a>
             <a
               href="https://x.com"
