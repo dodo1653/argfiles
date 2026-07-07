@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet-async'
-import { ShieldAlert } from 'lucide-react'
+import { ShieldAlert, Eye } from 'lucide-react'
 import Stamp from '../components/ui/Stamp'
 import EvidenceCard from '../components/ui/EvidenceCard'
+import EvidencePhotoShowcase from '../components/ui/EvidencePhotoShowcase'
 import RevealOnScroll from '../components/animations/RevealOnScroll'
 import { evidenceItems } from '../data/evidence'
 
@@ -32,7 +33,35 @@ export default function EvidencePage() {
           </p>
         </RevealOnScroll>
 
-        <div className="mt-12 space-y-10">
+        {/* Photo evidence — eerie, unsettling, dossier aesthetics */}
+        <RevealOnScroll delay={0.1}>
+          <div className="mt-16 mb-2">
+            <div className="flex items-center gap-2 mb-4">
+              <Eye className="w-4 h-4 text-red" />
+              <span className="text-[10px] font-mono font-semibold uppercase tracking-[0.2em] text-red/70">
+                Photographic Evidence
+              </span>
+            </div>
+            <div className="relative p-4 rounded-lg border border-red/10 bg-red/[0.02]">
+              <div className="absolute top-3 left-3 text-[8px] font-mono text-red/30 tracking-widest">
+                CONFIDENTIAL
+              </div>
+              <EvidencePhotoShowcase />
+              <div className="absolute bottom-3 right-3 text-[8px] font-mono text-red/30">
+                SOURCE: FIFA ARCHIVE
+              </div>
+            </div>
+          </div>
+        </RevealOnScroll>
+
+        {/* Divider */}
+        <div className="mt-16 mb-8 flex items-center gap-3">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-red/20 to-transparent" />
+          <span className="text-[9px] font-mono text-red/40 tracking-[0.3em] uppercase">Case Logs</span>
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-red/20 to-transparent" />
+        </div>
+
+        <div className="mt-8 space-y-10">
           {evidenceItems.map((item, i) => (
             <EvidenceCard key={item.id} {...item} index={i} />
           ))}

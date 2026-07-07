@@ -107,4 +107,40 @@ export const tweets: TweetItem[] = [
     likes: '189.3K',
     retweets: '47.6K',
   },
+  {
+    handle: '_Zaraquin',
+    displayName: 'Zaraquin',
+    content:
+      'The fix has been in since 2022. Infantino wanted Argentina to win then, and he wants them to win now. The Balogun red card reversal proved that FIFA answers to power, not to rules. This World Cup is an embarrassment.',
+    url: 'https://x.com/_Zaraquin/status/2074557286526382550?s=20',
+    likes: '56.8K',
+    retweets: '14.2K',
+  },
+  {
+    handle: 'NoodleHairCR7',
+    displayName: 'NoodleHairCR7',
+    content:
+      'Egypt had that goal disallowed after a 20-second VAR rewind for a shirt pull that nobody saw in real time.\n\nMeanwhile Argentina\'s second goal against Cape Verde came from a clear offside that VAR "missed."\n\nMake it make sense.',
+    url: 'https://x.com/NoodleHairCR7/status/2074546326604316908?s=20',
+    likes: '38.4K',
+    retweets: '9.7K',
+  },
+  {
+    handle: 'mbafraaude',
+    displayName: 'Mba Fraude',
+    content:
+      'Every tournament the same story. Every 50/50 decision goes the same way. Every VAR check bends the same direction.\n\nAt what point does "coincidence" become "design"?\n\nThe Fifa Files are building themselves.',
+    url: 'https://x.com/mbafraaude/status/2074553553868189723?s=20',
+    likes: '72.1K',
+    retweets: '18.5K',
+  },
+  {
+    handle: 'PolymarketSport',
+    displayName: 'Polymarket Sports',
+    content:
+      'The odds on Polymarket for "Argentina to benefit from a controversial VAR decision" have been climbing all tournament.\n\nThe market has been right every single time.\n\nJust data. Nothing more.',
+    url: 'https://x.com/PolymarketSport/status/2074550571466404246?s=20',
+    likes: '94.6K',
+    retweets: '22.3K',
+  },
 ]

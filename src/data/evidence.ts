@@ -21,6 +21,7 @@ export const evidenceItems: EvidenceItem[] = [
     tweetLinks: [
       { handle: 'RodriVidaal', url: 'https://x.com/RodriVidaal/status/2074558142629724508?s=20' },
       { handle: 'CodyKakpo', url: 'https://x.com/CodyKakpo/status/2074572108295000423?s=20' },
+      { handle: 'mbafraaude', url: 'https://x.com/mbafraaude/status/2074553553868189723?s=20' },
     ],
   },
   {
@@ -34,6 +35,7 @@ export const evidenceItems: EvidenceItem[] = [
       'First major rigged allegation of the knockout stage. "Why does it always seem to happen with Argentina?" became a trending sentiment.',
     tweetLinks: [
       { handle: 'NoodleHairCR7', url: 'https://x.com/NoodleHairCR7/status/2074535612288307656?s=20' },
+      { handle: 'NoodleHairCR7', url: 'https://x.com/NoodleHairCR7/status/2074546326604316908?s=20' },
       { handle: 'LudwigAhgren', url: 'https://x.com/LudwigAhgren/status/2074541948116070573?s=20' },
     ],
   },
@@ -49,6 +51,7 @@ export const evidenceItems: EvidenceItem[] = [
     tweetLinks: [
       { handle: 'jacksonhinkle', url: 'https://x.com/jacksonhinkle/status/2074564486141264303?s=20' },
       { handle: 'TheSaviour', url: 'https://x.com/TheSaviour/status/2074583076588368071?s=20' },
+      { handle: 'PolymarketSport', url: 'https://x.com/PolymarketSport/status/2074550571466404246?s=20' },
     ],
   },
   {
@@ -65,6 +68,7 @@ export const evidenceItems: EvidenceItem[] = [
       { handle: 'bassem_youssef9', url: 'https://x.com/bassem_youssef9/status/2074556399703429526?s=20' },
       { handle: 'FabrizioRomano', url: 'https://x.com/FabrizioRomano/status/2074581485890277399?s=20' },
       { handle: 'BBCSport', url: 'https://x.com/BBCSport/status/2074596583052845233?s=20' },
+      { handle: '_Zaraquin', url: 'https://x.com/_Zaraquin/status/2074557286526382550?s=20' },
     ],
   },
   {
