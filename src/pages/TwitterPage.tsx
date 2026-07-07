@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { TrendingUp } from 'lucide-react'
 import { usePageTitle } from '../utils/usePageTitle'
 import Stamp from '../components/ui/Stamp'
-import TweetCard from '../components/ui/TweetCard'
+import RealTweetEmbed from '../components/ui/RealTweetEmbed'
 import RevealOnScroll from '../components/animations/RevealOnScroll'
 import { tweets } from '../data/tweets'
 
@@ -23,7 +23,7 @@ export default function TwitterPage() {
           </h1>
           <p className="text-sm text-text-muted max-w-2xl leading-relaxed mb-4">
             Millions of posts. Global trending. From football fans to journalists to cultural
-            commentators — the world is connecting the dots. Below are 11 of the most viral
+            commentators — the world is connecting the dots. Below are {tweets.length} of the most viral
             posts exposing the truth.
           </p>
           <div className="flex items-center gap-4 text-xs font-mono text-text-muted">
@@ -37,14 +37,16 @@ export default function TwitterPage() {
             </span>
             <span className="text-border hidden sm:inline">|</span>
             <span className="hidden sm:inline">
-              <span className="text-gold font-semibold">11</span> curated exhibits
+              <span className="text-gold font-semibold">{tweets.length}</span> curated exhibits
             </span>
           </div>
         </RevealOnScroll>
 
-        <div className="mt-10 grid sm:grid-cols-2 gap-4">
+        <div className="mt-10 grid sm:grid-cols-2 gap-6">
           {tweets.map((tweet, i) => (
-            <TweetCard key={tweet.handle} {...tweet} index={i} />
+            <RevealOnScroll key={tweet.id} delay={i * 0.04}>
+              <RealTweetEmbed url={tweet.url} />
+            </RevealOnScroll>
           ))}
         </div>
 
