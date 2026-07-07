@@ -5,7 +5,7 @@ import Stamp from '../components/ui/Stamp'
 import TokenBadge from '../components/ui/TokenBadge'
 import RevealOnScroll from '../components/animations/RevealOnScroll'
 
-const CA_PLACEHOLDER = 'Coming Soon...'
+const CA = '5tZpXgw3PuBQ4KZjk4aT4vPjnTgtJgyL3rr9rPxMpump'
 
 const steps = [
   {
@@ -30,8 +30,7 @@ export default function TokenPage() {
   const [copied, setCopied] = useState(false)
 
   const copyAddress = () => {
-    if (CA_PLACEHOLDER === 'Coming Soon...') return
-    navigator.clipboard.writeText(CA_PLACEHOLDER)
+    navigator.clipboard.writeText(CA)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -107,7 +106,7 @@ export default function TokenPage() {
               </p>
               <div className="flex items-center gap-2 p-3 rounded-md bg-bg border border-border">
                 <code className="flex-1 text-xs font-mono text-text-muted truncate">
-                  {CA_PLACEHOLDER}
+                  {CA}
                 </code>
                 <button
                   onClick={copyAddress}
@@ -121,7 +120,7 @@ export default function TokenPage() {
                 </button>
               </div>
               <p className="text-[10px] text-text-muted font-mono mt-2">
-                CA will be posted once live. Follow X for the announcement.
+                Live on pump.fun. Trade now.
               </p>
             </div>
           </RevealOnScroll>
@@ -152,7 +151,7 @@ export default function TokenPage() {
         <RevealOnScroll delay={0.3}>
           <div className="mt-10 text-center">
             <a
-              href="https://pump.fun"
+              href="https://pump.fun/coin/5tZpXgw3PuBQ4KZjk4aT4vPjnTgtJgyL3rr9rPxMpump"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-solana-purple/10 border border-solana-purple/30 text-solana-green rounded-lg font-mono text-sm font-semibold hover:bg-solana-purple/20 transition-all duration-300"
