@@ -1,17 +1,16 @@
 import { motion } from 'framer-motion'
-import { Helmet } from 'react-helmet-async'
 import { TrendingUp } from 'lucide-react'
+import { usePageTitle } from '../utils/usePageTitle'
 import Stamp from '../components/ui/Stamp'
 import TweetCard from '../components/ui/TweetCard'
 import RevealOnScroll from '../components/animations/RevealOnScroll'
 import { tweets } from '../data/tweets'
 
 export default function TwitterPage() {
+  usePageTitle('X / Twitter Storm')
+
   return (
     <>
-      <Helmet>
-        <title>X / Twitter Storm — The Fifa Files</title>
-      </Helmet>
 
       <section className="pt-28 pb-20 px-4 sm:px-6 max-w-5xl mx-auto">
         <RevealOnScroll>

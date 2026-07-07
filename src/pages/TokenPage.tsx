@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { usePageTitle } from '../utils/usePageTitle'
 import { Copy, Check, ExternalLink, Coins, Rocket, Shield } from 'lucide-react'
 import Stamp from '../components/ui/Stamp'
 import TokenBadge from '../components/ui/TokenBadge'
@@ -26,6 +26,7 @@ const steps = [
 ]
 
 export default function TokenPage() {
+  usePageTitle('$FIFA Token')
   const [copied, setCopied] = useState(false)
 
   const copyAddress = () => {
@@ -37,24 +38,32 @@ export default function TokenPage() {
 
   return (
     <>
-      <Helmet>
-        <title>$FIFA Token — The Fifa Files</title>
-      </Helmet>
 
       <section className="pt-28 pb-20 px-4 sm:px-6 max-w-4xl mx-auto">
         <RevealOnScroll>
           <div className="mb-2">
             <Stamp variant="confidential" label="TOKEN" />
           </div>
-          <h1 className="font-mono text-3xl sm:text-4xl font-bold text-text mt-3 mb-2">
-            $FIFA
-          </h1>
-          <p className="text-sm text-text-muted max-w-xl leading-relaxed mb-6">
+
+          <div className="flex flex-col items-center gap-6 mb-8">
+            <img
+              src="/ticker.png"
+              alt="$FIFA Token"
+              className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-gold/30 shadow-lg shadow-gold/10 object-cover"
+            />
+            <h1 className="font-mono text-3xl sm:text-4xl font-bold text-text">
+              $FIFA
+            </h1>
+          </div>
+
+          <p className="text-sm text-text-muted max-w-xl leading-relaxed mb-6 mx-auto">
             The conspiracy is tokenised. $FIFA is a community-driven token on the Solana
             blockchain, launched on pump.fun. Holders are part of the dossier — the evidence
             lives on-chain, and the narrative can never be deleted.
           </p>
-          <TokenBadge size="lg" />
+          <div className="flex justify-center">
+            <TokenBadge size="lg" />
+          </div>
         </RevealOnScroll>
 
         <div className="mt-10 grid md:grid-cols-2 gap-6">

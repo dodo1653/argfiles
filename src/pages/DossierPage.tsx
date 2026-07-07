@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { Helmet } from 'react-helmet-async'
 import { FileText, UserCheck, AlertTriangle, Scale, Quote } from 'lucide-react'
+import { usePageTitle } from '../utils/usePageTitle'
 import Stamp from '../components/ui/Stamp'
 import RedactedText from '../components/ui/RedactedText'
 import RevealOnScroll from '../components/animations/RevealOnScroll'
@@ -67,11 +67,10 @@ const quotes = [
 ]
 
 export default function DossierPage() {
+  usePageTitle('Full Dossier')
+
   return (
     <>
-      <Helmet>
-        <title>Full Dossier — The Fifa Files</title>
-      </Helmet>
 
       <section className="pt-28 pb-20 px-4 sm:px-6 max-w-4xl mx-auto">
         <RevealOnScroll>

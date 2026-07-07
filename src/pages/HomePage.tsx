@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, ExternalLink, FileText, MessageCircle, Database } from 'lucide-react'
-import { Helmet } from 'react-helmet-async'
+import { usePageTitle } from '../utils/usePageTitle'
 import Stamp from '../components/ui/Stamp'
 import TypewriterText from '../components/animations/TypewriterText'
 import RevealOnScroll from '../components/animations/RevealOnScroll'
@@ -32,11 +32,10 @@ const previewCards = [
 ]
 
 export default function HomePage() {
+  usePageTitle('Classified Dossier')
+
   return (
     <>
-      <Helmet>
-        <title>The Fifa Files — Classified Dossier</title>
-      </Helmet>
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -160,6 +159,11 @@ export default function HomePage() {
 
         <RevealOnScroll delay={0.3}>
           <div className="mt-20 text-center p-8 rounded-lg border border-border bg-surface">
+            <img
+              src="/ticker.png"
+              alt="$FIFA Token"
+              className="w-16 h-16 rounded-full border-2 border-gold/20 mx-auto mb-3 object-cover"
+            />
             <TokenBadge className="mb-3" />
             <p className="font-mono text-lg font-bold text-text">$FIFA</p>
             <p className="text-sm text-text-muted mt-2 mb-4 max-w-md mx-auto">

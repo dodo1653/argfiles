@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { Helmet } from 'react-helmet-async'
 import { ShieldAlert, Eye } from 'lucide-react'
+import { usePageTitle } from '../utils/usePageTitle'
 import Stamp from '../components/ui/Stamp'
 import EvidenceCard from '../components/ui/EvidenceCard'
 import EvidencePhotoShowcase from '../components/ui/EvidencePhotoShowcase'
@@ -8,11 +8,10 @@ import RevealOnScroll from '../components/animations/RevealOnScroll'
 import { evidenceItems } from '../data/evidence'
 
 export default function EvidencePage() {
+  usePageTitle('Evidence')
+
   return (
     <>
-      <Helmet>
-        <title>Evidence — The Fifa Files</title>
-      </Helmet>
 
       <section className="pt-28 pb-20 px-4 sm:px-6 max-w-4xl mx-auto">
         <RevealOnScroll>

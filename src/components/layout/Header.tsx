@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FolderClosed, FolderOpen, FileText } from 'lucide-react'
+import { FolderClosed, FolderOpen } from 'lucide-react'
 import { cn } from '../../utils/cn'
 
 const tabs = [
@@ -18,8 +18,12 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-xl border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-14">
-          <Link to="/" className="flex items-center gap-2 group">
-            <FileText className="w-4 h-4 text-gold group-hover:text-red transition-colors" />
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <img
+              src="/ticker.png"
+              alt="$FIFA"
+              className="w-5 h-5 rounded-full border border-gold/30 object-cover"
+            />
             <span className="font-mono text-sm font-semibold text-text tracking-tight">
               FIFA_FILES
             </span>
