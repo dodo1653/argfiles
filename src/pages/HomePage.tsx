@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, ExternalLink, FileText, MessageCircle, Database } from 'lucide-react'
@@ -33,6 +34,26 @@ const previewCards = [
 
 export default function HomePage() {
   usePageTitle('Classified Dossier')
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const handler = () => {
+      video.muted = false
+      video.volume = 0.12
+      document.removeEventListener('click', handler)
+      document.removeEventListener('touchstart', handler)
+    }
+
+    document.addEventListener('click', handler)
+    document.addEventListener('touchstart', handler)
+    return () => {
+      document.removeEventListener('click', handler)
+      document.removeEventListener('touchstart', handler)
+    }
+  }, [])
 
   return (
     <>
@@ -41,6 +62,7 @@ export default function HomePage() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <video
+            ref={videoRef}
             autoPlay
             muted
             loop
