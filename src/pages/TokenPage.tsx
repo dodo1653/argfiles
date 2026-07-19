@@ -5,7 +5,7 @@ import Stamp from '../components/ui/Stamp'
 import TokenBadge from '../components/ui/TokenBadge'
 import RevealOnScroll from '../components/animations/RevealOnScroll'
 
-const CA = 'F1jQ8uPRB6ShhgcoxLw396wg2HkoPfKyfsgpyRLrpump'
+const CA = 'Coming Soon...'
 
 const steps = [
   {
@@ -120,7 +120,7 @@ export default function TokenPage() {
                 </button>
               </div>
               <p className="text-[10px] text-text-muted font-mono mt-2">
-                Live on pump.fun. Trade now.
+                CA will be posted once live. Follow X for the announcement.
               </p>
             </div>
           </RevealOnScroll>
@@ -151,7 +151,7 @@ export default function TokenPage() {
         <RevealOnScroll delay={0.3}>
           <div className="mt-10 text-center">
             <a
-              href="https://pump.fun/coin/F1jQ8uPRB6ShhgcoxLw396wg2HkoPfKyfsgpyRLrpump"
+              href="https://pump.fun"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-solana-purple/10 border border-solana-purple/30 text-solana-green rounded-lg font-mono text-sm font-semibold hover:bg-solana-purple/20 transition-all duration-300"
